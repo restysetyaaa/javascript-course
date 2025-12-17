@@ -1,2 +1,3 @@
 # javascript-course
-hello! this is my journey startinf to become a front-end developer
+
+hello! this is my journey starting to become a front-end developer
