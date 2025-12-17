@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Variables Exercise</title>
+  </head>
+
+  <body>
+    <!-- 5a -->
+    <script>
+      const name = "Resty";
+
+      // 5b
+      console.log(`My name is: ${name}`);
+
+      // 5c
+      const coffee = 5;
+      const bagels = 3;
+      const soup = 9;
+      let cost = 1 * coffee + 2 * bagels + 1 * soup;
+      //let cost = 5+2*3+9; -> alternatif lain
+
+      // 5d
+      console.log(`Cost of food: $${cost}`);
+
+      /*
+            alternatif lain untuk 5c dan 5d
+         
+        const cost2 = 20;
+        console.log(`Cost of food: $${cost2}`);
+            */
+
+      // 5e
+      const tax = 0.1;
+      const taxAmount = tax * cost;
+      console.log(`Tax(10%): $${taxAmount}`); //5f
+
+      // 5g
+      const totalCost = cost + taxAmount;
+      console.log(`Total cost: $${totalCost}`);
+    </script>
+  </body>
+</html>
