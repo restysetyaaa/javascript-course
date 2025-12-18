@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleans and If-Statements Exercise 2</title>
+  </head>
+
+  <body>
+    <script>
+      /*
+            Untuk menjalankannya gantian diset komen ya tiap nomor/tiap blok!
+        */
+
+      // 6d
+      const age = 2;
+
+      if (age <= 6 || age >= 65) {
+        console.log("Discount");
+      } else {
+        console.log("No discount");
+      }
+
+      // 6e
+      const isHoliday = false;
+      //const age = 70;
+      if ((age <= 6 || age >= 65) && !isHoliday) {
+        console.log(`Age=${age} & Not a Holiday = Discount`);
+      } else if ((age <= 6 || age >= 65) && isHoliday) {
+        console.log(`Age=${age}, Holiday, No discount`); //tanpa baris 27 dan 28 pun oke, tp untuk netrace yaa no problem lah kalo pake juga
+      } else {
+        console.log(`Age=${age}, No discount`);
+      }
+    </script>
+  </body>
+</html>

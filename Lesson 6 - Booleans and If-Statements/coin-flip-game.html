@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin Flip Game (Challenge Exercise) 6f-6j</title>
+  </head>
+
+  <body>
+    <script>
+      /*
+        6f-6i
+        komen di bawah ini kalo mau liat hasil if-else biasa
+      */
+      const randomNumber = Math.random();
+      let result = "";
+      guess = "heads"; //bisa diganti jadi 'tails' juga
+
+      if (randomNumber < 0.5) {
+        result = "heads";
+        console.log(`coin: heads, your guess: ${guess}`); //ini buat ngetrace aja sih
+      } else {
+        result = "tails";
+        console.log(`coin: tails, your guess: ${guess}`);
+      }
+
+      if (guess === result) {
+        console.log("You win!");
+      } else {
+        console.log("You lose!");
+      }
+
+      /*
+        6j. challenge: use ternary operators (condition ? A:B)
+      */
+      const randomNum = Math.random();
+      const flipresult = randomNum < 0.5 ? "heads" : "tails";
+
+      const guess2 = "heads"; //bisa diganti jadi 'tails' juga
+      console.log(`coin: ${flipresult}, your guess: ${guess2}`); //buat ngetrace aja sih
+      console.log(guess2 === flipresult ? "You win!" : "You lose!");
+    </script>
+  </body>
+</html>

@@ -30,3 +30,50 @@ hello! this is my journey starting to become a front-end developer
         ex: let name4&%@ = 6; itu juga tidak bisa
 
     eval(calculation) berguna untuk mengubah string yang ada di variable calculation menjadi angka. eval() adalah fungsi bawaan javascript yang akan menjalankan string seolah-olah itu kode JavaScript. Namun fungsi tersebut sebenarnya kurang aman untuk sekadar mengubah string menjadi angka, jadi ini untuk latihan saja.
+
+# Lesson 6: Booleans and If-Statements
+
+    Boolean adalah salah satu tipe dari value yang menyatakan "true" atau "false".
+
+    Comparison Operator: >, <, >=, <=, ===, !==
+    Perbedaan == dan === (umum digunakan di javascript):
+    == tidak bisa mengidentifikasi perbedaan tipe data, 5 == '5.00' dianggap true, padahal satunya bertipe number dan satunya string. Dan harusnya 5 == '5.00' ini memiliki value false karena tipe datanya berbeda.
+
+    Steps:
+    1. Komputer adan memilih secara acak, menggunakan logika pengambilan angka acak dari Math.random() -> nilai akan disimpan di variable computerMove
+
+       Logic pengambilan keputusan untuk komputer:
+       Karena ada 3 pilihan (batu, kertas, gunting) maka kita akan
+       bagi angka random (0-1) menjadi 3 bagian yaitu:
+       0 - 1/3 untuk Rock
+       1/3 - 2/3 untuk Paper
+       2/3 - 1 untuk Scissors
+       Kenapa sih kok pakai pecahan/desimal? itu karena di JavaScript selalu menghasilkan angka di antara 0 dan 1 (tidak termasuk 1). Mangkanya pakai pecahan/desimal gitu, biar universal/sesuai sama standart. Selain itu, 0-1 mudah dibagi/dipotong jadi pecahan sesuai jumlah pilihan.
+
+        Scope: batas dari variable. Ketika keadaan seperti ini:
+        onclick="
+                const randomNumber =  Math.random();
+                if(randomNumber >= 0 && randomNumber < 1/3){
+                    const computerMove = 'rock';
+                } else if(randomNumber >= 1/3 && randomNumber < 2/3){
+                    const computerMove = 'paper';
+                } else if(randomNumber >= 2/3 && randomNumber < 1){
+                    const computerMove = 'scissors';
+                }
+
+                console.log(computerMove);
+        NAH.. variable computerMove tidak bisa diakses di luar, karena dia
+        dideklarasikan di dalam kondisi decision (variable yang
+        dideklarasikan di dalam blok is/else + menggunakan const/let hanya
+        dapat berlaku di dalam block scope itu sendiri), oleh karena itu
+        ketika dijalankan, console mengeluarkan pesan error.
+    2. Mengoversi pilihan dari komputer untuk disimpan di variable result
+    3. Menampilkan hasilnya lewat pop-up
+
+    Strategi untuk JavaScript:
+    1. Temukan algoritma, jadi apa yang harus dilakukan untuk bisa menghasilkan output yang sesuai
+    2. Ubah algoritma jadi code
+
+    Tambahan: Truthy and Falsy value
+    Falsy values: false, 0, '', NaN. undefined, null
+    Selain yang ada di falsy values, itu adalah truthy values
