@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login Simulation Playground</title>
+
+    <style>
+      .button {
+        background-color: blue;
+        color: white;
+      }
+
+      .button:hover {
+        background-color: rgb(0, 153, 255);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/submit" method="POST">
+      <div>
+        <label for="username">Username: </label>
+        <input type="text" id="username" />
+      </div>
+
+      <div>
+        <label for="password">Password: </label>
+        <input type="text" id="password" />
+      </div>
+
+      <button class="button" type="submit" onclick="login(username, password)">
+        Login
+      </button>
+    </form>
+
+    <script>
+      const username = "resty";
+      const password = "jeongwoo";
+
+      //cek input
+      function login(username, password) {
+        if (username === "resty" && password === "jeongwoo") {
+          let isLoggedIn = 1;
+          window.location.html = "rock-paper-scissors.html";
+          console.log(`User ${username}berhasil login`);
+        } else {
+          let isLoggedIn = 0;
+          console.log("Ada yang salah dengan username atau password.");
+        }
+      }
+    </script>
+  </body>
+</html>

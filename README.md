@@ -77,3 +77,20 @@ hello! this is my journey starting to become a front-end developer
     Tambahan: Truthy and Falsy value
     Falsy values: false, 0, '', NaN. undefined, null
     Selain yang ada di falsy values, itu adalah truthy values
+
+# Lesson 7: Function
+
+    Aturan untuk memberi nama function dan parameter:
+    1. tidak dapat menggunakan nama spesial. ex: function()
+    2. tidak bisa diawali dengan angka, ex:123functionname()
+    3. tidak dapat diawali dengan spesial character, ex: %$functionname()
+    PALING BAIK MENGGUNAKAN camelCase.
+
+    Benefit menggunakan function dalam code adalah, kita bisa lebih efisien dalam pemrograman. Selain itu, kita tidak perlu menuliskan beberapa baris kode yang sama berulang kali. Dengan begitu hasilnya juga akan lebih konsisten.
+
+    Return value dalam function dapat berupa seperti ini:
+    return 2+2;
+    return variable1;
+    return Math.random();
+
+    Fungsi diakhiri dengan return, jadi jika sudah dijalankan hingga baris return maka program otomatis langsung kembali ke awal, meskipun ada code di bawahnya return, itu tidak akan dieksekusi.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 7 Exercise - Convert Temperature</title>
+  </head>
+
+  <body>
+    <script>
+      // 7d
+      function convertToFahrenheit(celcius) {
+        const fahrenheit = (celcius * 9) / 5 + 32;
+        //console.log(fahrenheit);
+        return fahrenheit;
+        //bisa juga: return (celcius * 9) / 5 + 32;
+      }
+      convertToFahrenheit(25);
+
+      // 7e
+      function convertToCelcius(fahrenheit) {
+        const celcius = ((fahrenheit - 32) * 5) / 9;
+        //console.log(celcius);
+        return celcius;
+      }
+      convertToCelcius(86);
+
+      // 7f
+      function convertTemperature(degrees, unit) {
+        if (unit === "C") {
+          degrees = convertToFahrenheit(degrees);
+          unit = "F";
+        } else if (unit === "F") {
+          degrees = convertToCelcius(degrees);
+          unit = "C";
+        }
+        console.log(`'${degrees}${unit}'`);
+      }
+      convertTemperature(25, "C");
+      convertTemperature(86, "F");
+    </script>
+  </body>
+</html>

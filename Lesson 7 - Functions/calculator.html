@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator Improve</title>
+  </head>
+
+  <body>
+    <p class="number">
+      <button onclick="updateCalculation2('1')">1</button>
+      <button onclick="updateCalculation2('2')">2</button>
+      <button onclick="updateCalculation2('3')">3</button>
+    </p>
+    <p>
+      <button onclick="updateCalculation2('4')">4</button>
+      <button onclick="updateCalculation2('5')">5</button>
+      <button onclick="updateCalculation2('6')">6</button>
+    </p>
+    <p>
+      <button onclick="updateCalculation2('7')">7</button>
+      <button onclick="updateCalculation2('8')">8</button>
+      <button onclick="updateCalculation2('9')">9</button>
+    </p>
+    <p>
+      <button onclick="updateCalculation2('+')">+</button>
+      <button
+        onclick="/*updateCalculation('=')*/;
+        /*
+                jika menggunakan updateCalculation2*/
+
+          calculation = eval(calculation);
+          console.log(calculation);
+        
+      "
+      >
+        =
+      </button>
+      <button
+        onclick="/*updateCalculation('C')*/;
+        /*
+                jika menggunakan updateCalculation2*/
+                
+          calculation = '';
+          console.log('clear success!');
+        
+      "
+      >
+        C
+      </button>
+    </p>
+
+    <script>
+      let calculation = "";
+
+      /*
+      function updateCalculation(button) {
+        if (button !== "C") {
+          if (button === "1") {
+            calculation += "1";
+          } else if (button === "2") {
+            calculation += "2";
+          } else if (button === "3") {
+            calculation += "3";
+          } else if (button === "4") {
+            calculation += "4";
+          } else if (button === "5") {
+            calculation += "5";
+          } else if (button === "6") {
+            calculation += "6";
+          } else if (button === "7") {
+            calculation += "7";
+          } else if (button === "8") {
+            calculation += "8";
+          } else if (button === "9") {
+            calculation += "9";
+          } else if (button === "+") {
+            calculation += "+";
+          } else if (button === "=") {
+            calculation = eval(calculation);
+          }
+          return console.log(calculation);
+        } else if (button === "C") {
+          calculation = "";
+          return console.log("clear success!");
+        }
+      }
+*/
+      function updateCalculation2(value) {
+        calculation += value;
+        console.log(calculation);
+      }
+    </script>
+  </body>
+</html>
